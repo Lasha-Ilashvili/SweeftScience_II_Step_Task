@@ -13,13 +13,19 @@ package com.example.sweeftscience_II_step_task
 fun singleNumber(nums: IntArray): Int {
     nums.sort()
 
-    for (i in 1..<nums.size step 2) {
-        if (nums[i] != nums[i - 1])
-            return nums[i - 1]
+    var left = 1
+    var right = nums.lastIndex
 
-        if (i + 1 == nums.lastIndex)
-            return nums[i + 1]
+    while (left < right) {
+        if (nums[left] != nums[left - 1])
+            return nums[left - 1]
+
+        if (nums[right] != nums[right - 1])
+            return nums[right]
+
+        left += 2
+        right -= 2
     }
 
-    return nums[0]
+    return nums[right]
 }
