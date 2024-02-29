@@ -9,7 +9,10 @@ package com.example.sweeftscience_II_step_task
 */
 
 
-
+/*
+ * Finds the single number in a non-empty array of integers
+ * where every element appears twice except for one.
+ */
 fun singleNumber(nums: IntArray): Int {
     nums.sort()
 
