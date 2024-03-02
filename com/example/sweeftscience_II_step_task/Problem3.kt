@@ -11,7 +11,7 @@ package com.example.sweeftscience_II_step_task
  * *********************************************************
 */
 
-/**
+/*
  * Finds the longest common prefix among an array of strings.
  * If there's no common prefix, an empty string is returned.
  */

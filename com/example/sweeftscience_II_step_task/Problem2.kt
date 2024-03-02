@@ -1,7 +1,5 @@
 package com.example.sweeftscience_II_step_task
 
-import java.sql.Types
-
 /*
  * Task 2
  *
@@ -11,6 +9,8 @@ import java.sql.Types
  * *********************************************************
 */
 
+
+/* Enum class representing different coin denominations */
 enum class Coins(val value: Int) {
     ONE(1),
     FIVE(5),
@@ -19,6 +19,7 @@ enum class Coins(val value: Int) {
     FIFTY(50);
 }
 
+/* Function to calculate the minimum number of coins needed to make up a given amount */
 fun minSplit(amount: Int): Int {
 
     val coins = Coins.entries.toList()
@@ -26,6 +27,7 @@ fun minSplit(amount: Int): Int {
     return minSplitHelper(coins = coins, amount = amount)
 }
 
+/* Helper function to calculate the minimum number of coins recursively */
 fun minSplitHelper(
     coins: List<Coins>,
     amount: Int,
@@ -60,6 +62,7 @@ fun minSplitHelper(
     return minAmount
 }
 
+/* Function to determine if a coin should not be used for the given amount */
 fun shouldNotUseACoin(coin: Coins, amount: Int): Boolean {
     if (amount % Coins.FIFTY.value == 0) {
         return coin != Coins.FIFTY
