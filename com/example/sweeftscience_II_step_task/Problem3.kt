@@ -9,7 +9,8 @@ package com.example.sweeftscience_II_step_task
  * სტრინგს.მაგ:[“extract”,”exhale”, “excavate”] , პასუხი იქნება “ex”
  *
  * *********************************************************
-*/
+ */
+
 
 /*
  * Finds the longest common prefix among an array of strings.
@@ -17,7 +18,7 @@ package com.example.sweeftscience_II_step_task
  */
 fun longestPrefix(array: Array<String>): String {
 
-    return array.reduceOrNull() { prefix, current ->
+    return array.reduceOrNull { prefix, current ->
         prefix.zip(current).takeWhile { (a, b) ->
             a == b
         }.joinToString("") { it.first.toString() }

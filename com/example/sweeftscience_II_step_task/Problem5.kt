@@ -7,7 +7,7 @@ package com.example.sweeftscience_II_step_task
  * ფუნქცია რომელიც დაითვლის n სართულზე ასვლის ვარიანტების რაოდენობას.
  *
  * *********************************************************
-*/
+ */
 
 
 /* Counts the number of distinct ways to climb a staircase of given stairs count */

@@ -7,7 +7,7 @@ package com.example.sweeftscience_II_step_task
  * (თეთრებში) და აბრუნებს მონეტების მინიმალურ რაოდენობას, რომლითაც შეგვიძლია ეს თანხა დავახურდაოთ.
  *
  * *********************************************************
-*/
+ */
 
 
 /* Enum class representing different coin denominations */
@@ -28,7 +28,7 @@ fun minSplit(amount: Int): Int {
 }
 
 /* Helper function to calculate the minimum number of coins recursively */
-fun minSplitHelper(
+private fun minSplitHelper(
     coins: List<Coins>,
     amount: Int,
     memo: MutableMap<Int, Int> = mutableMapOf()
@@ -63,7 +63,7 @@ fun minSplitHelper(
 }
 
 /* Function to determine if a coin should not be used for the given amount */
-fun shouldNotUseACoin(coin: Coins, amount: Int): Boolean {
+private fun shouldNotUseACoin(coin: Coins, amount: Int): Boolean {
     if (amount % Coins.FIFTY.value == 0) {
         return coin != Coins.FIFTY
     }
